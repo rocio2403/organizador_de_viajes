@@ -6,7 +6,7 @@ Este proyecto está pensado como una solución simple y escalable para tareas ad
 
 ---
 
-## 🚀 Objetivo del proyecto
+## Objetivos
 
 Facilitar la organización de viajes diarios de empleados:
 
@@ -17,7 +17,7 @@ Facilitar la organización de viajes diarios de empleados:
 
 ---
 
-## 🧩 Funcionalidades (estado actual)
+## Funcionalidades
 
 - [ ] Carga de empleados desde archivo Excel
 - [ ] Carga de choferes desde archivo Excel
@@ -30,7 +30,7 @@ Facilitar la organización de viajes diarios de empleados:
 
 ---
 
-## 🛠️ Tecnologías a utilizar
+## Herramientas utilizadas
 
 - Python
 - Pandas
@@ -39,7 +39,4 @@ Facilitar la organización de viajes diarios de empleados:
 - Folium / Mapas interactivos
 - Git & GitHub
 
----
-
-## 📁 Estructura inicial del proyecto
-
+## 📁 Estructura inicial del proy
