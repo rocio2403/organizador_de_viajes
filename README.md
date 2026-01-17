@@ -38,5 +38,3 @@ Facilitar la organización de viajes diarios de empleados:
 - Streamlit (interfaz de usuario)
 - Folium / Mapas interactivos
 - Git & GitHub
-
-## 📁 Estructura inicial del proy
