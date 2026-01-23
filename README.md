@@ -38,3 +38,20 @@ Facilitar la organización de viajes diarios de empleados:
 - Streamlit (interfaz de usuario)
 - Folium / Mapas interactivos
 - Git & GitHub
+
+
+**Nota**La distancia se calcula inicialmente usando distancia geodésica (línea recta sobre la superficie terrestre) como aproximación. En una etapa posterior, el modelo puede extenderse para utilizar rutas reales mediante APIs de mapas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
