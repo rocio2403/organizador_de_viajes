@@ -4,19 +4,33 @@ Created on Fri Jan 16 23:09:17 2026
 
 @author: Rocio
 """
+from geopy.distance import geodesic
 
-import math
+PLANTA_LAT = -34.589
+PLANTA_LON = -58.87275
 
-def haversine(lat1, lon1, lat2, lon2):
-    R = 6371  # radio Tierra en km
+def distancia_a_planta(lat, lon, planta_lat, planta_lon):
+    """
+    Devuelve la distancia en metros entre un punto y la planta.
+    """
+    return geodesic(
+        (lat, lon),
+        (planta_lat, planta_lon)
+    ).meters
 
-    phi1 = math.radians(lat1)
-    phi2 = math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dlambda = math.radians(lon2 - lon1)
 
-    a = math.sin(dphi / 2)**2 + \
-        math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2)**2
 
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    return R * c
+def agregar_distancia_planta(df, planta_lat, planta_lon):
+    """
+    Agrega una columna con la distancia a la planta (en metros).
+    """
+    df["distancia_planta"] = df.apply(
+        lambda fila: distancia_a_planta(
+            fila["lat"],
+            fila["lon"],
+            planta_lat,
+            planta_lon
+        ),
+        axis=1
+    )
+    return df
